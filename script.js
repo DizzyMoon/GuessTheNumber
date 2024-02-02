@@ -8,20 +8,14 @@ let lowestPossibleNumber = 0;
 
 function start() {
     console.log("Javascript is running");
-
-    guessContainer = document.querySelector("#guess-container");
-
-    var readyButton = document.createElement('button');
-    readyButton.textContent = "Ready";
-    readyButton.addEventListener('click', function() {
-        readyButton.classList.add("hide");
-        guessNumber();
-    })
-
-    guessContainer.appendChild(readyButton);
 }
 
 
+function readyButton() {
+    const readyButton = document.querySelector("#ready-button");
+    readyButton.classList.add("hide");
+    guessNumber();
+}
 
 function guessNumber() {
 
@@ -41,12 +35,15 @@ function guessNumber() {
 
     var tooHighButton = document.createElement('button');
     tooHighButton.textContent = "Too High";
+    tooHighButton.classList.add("button");
 
     var tooLowButton = document.createElement('button');
     tooLowButton.textContent = "Too Low";
+    tooLowButton.classList.add("button");
 
     var correctButton = document.createElement('button');
     correctButton.textContent = "Correct";
+    correctButton.classList.add("button");
 
 
     guessWrapper.appendChild(tooHighButton);
@@ -85,4 +82,8 @@ function correct() {
     guessContainer.classList.add("hide")
 
     gameOver.classList.remove("hide");
+}
+
+function refresh() {
+    location.reload(true);
 }

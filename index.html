@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Guess the Number</h1>
+    <h1>Guess The Number</h1>
     <p>I'll do the guessing</p>
     <hr>
     <p>Think of a number between 1 - 100</p>
     <hr>    
     <div id="guess-container">
+        <button id="ready-button" class="button" onclick="readyButton()">Ready</button>
     </div>
-    <div id="game-over" class="hide">I guessed it!</div>
+    <div id="game-over" class="hide">
+        <p class="victory-text">I GUESSED IT WOOOOOOOOOO!</p>
+        <button class="button victory-button" onclick="refresh()">Play again?</button>
+    </div>
+
+
+
     <script src="script.js"></script>
 </body>
 </html>
