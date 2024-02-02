@@ -1,0 +1,15 @@
+.guess-wrapper {
+    display: flex;
+    gap: 10px;
+    margin: 30px
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#game-over {
+    font-size: xx-large;
+    position: absolute;
+    top: 20%;
+}
